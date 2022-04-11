@@ -1,0 +1,2 @@
+Fazer um mini-cofre onde só pode ser aberto com a sequencia certa de botões apertados, este projeto
+ se trata mais de um jogo para se divertir

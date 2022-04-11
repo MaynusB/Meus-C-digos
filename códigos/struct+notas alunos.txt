@@ -1,0 +1,105 @@
+//Desenvolva um algoritmo com a estrutura de dados para armazenar os dados de 10 estudantes (nome, idade e nota final) de uma mesma turma. Posteriormente, execute cada uma das ações a seguir (apresente um Menu ao usuário para facilitar sua escolha):
+//1) Mostrar o número de alunos aprovados e reprovados (nota de aprovação igual ou superior a 6,0);
+//2) Mostrar o percentual de alunos aprovados e reprovados;
+//3) Mostrar a média da turma;
+//4) Mostrar os dados do estudante com a maior nota;
+#include <stdio.h>
+struct Aluno {
+  char nome[30];
+  int idade;
+  float nota_final;
+};
+int main() {
+  int i = 0;
+  int quantidade;
+  int opcao;
+  int total;
+  float maiornota;
+  float aprovados=0, reprovados=0;
+  float paprovados=0, preprovados=0;
+  float media;
+  float totalnotas;
+
+  struct Aluno aluno[3];
+
+  for (i = 0; i < 3; i++){
+    printf("\nDigite o nome do %d° aluno:\n",  i+1);
+    scanf("%s", aluno[i].nome);
+    printf("Digite a idade do %d° aluno:\n",  i+1);
+    scanf("%d", &aluno[i].idade);
+    printf("Digite a nota final do %d° aluno:\n",  i+1);
+    scanf("%f", &aluno[i].nota_final);
+  }
+
+  for (i = 0; i < 3; i++){
+    if(aluno[i].nota_final >= 6) {
+  }
+}
+  for (i = 0; i < 3; i++){
+    if(aluno[i].nota_final <= 6) { 
+  }
+}
+
+printf("\nMENU DE OPÇÕES\n");
+  printf("DIGITE 1 para mostrar o número de alunos aprovados e reprovados\n");
+  printf("DIGITE 2 para saber o percentual de APROVADOS e REPROVADOS\n");
+  printf("DIGITE 3 a média das notas entre eles \n");
+  printf("DIGITE 4 mostrar os dados do estudante com a maior nota \n");
+  scanf("%d", &opcao);
+  switch(opcao){
+    case 1: {
+      for(i = 0; i < 3; i++) {
+        if (aluno[i].nota_final >=6) {
+          aprovados++;
+        }
+        else {
+          reprovados++;
+        }
+      }
+      printf("Aprovados: %.2f\n", aprovados);
+      printf("Reprovados: %.2f\n", reprovados);
+      break;
+    }
+    case 2: {
+      for(i = 0; i < 3; i++) {
+        if (aluno[i].nota_final >=6) {
+          aprovados++;
+        }
+        else {
+          reprovados++;
+        }
+      }
+
+      paprovados = (aprovados / 3) * 100;
+      preprovados = (reprovados / 3) * 100;
+      printf("\nPorcentagem de APROVADOS: %.2f", paprovados);
+      printf("\nPorcentagem de REPROVADOS: %.2f", preprovados);
+      break;
+    }
+    case 3: {
+      for(i = 0; i < 3; i++) {
+       totalnotas = totalnotas + aluno[i].nota_final;
+    }
+      media = totalnotas / 3;
+      printf("%.2f\n", media);
+      break;
+    }
+
+    case 4: {
+     for (i = 0; i < 3; i++) {
+       printf("\n%.2f ", aluno[i].nota_final);
+       if (aluno[i].nota_final > aluno[i+1].nota_final){ 
+      aluno[i+1].nota_final = aluno[i].nota_final;
+      for(i = 0; i < totalnotas; i++){
+        if(aluno[i].nota_final == aluno[i+1].nota_final){
+         }
+        }
+      }
+    }
+     printf("\nMAIOR NOTA:%.2f", maiornota);
+     break;
+
+    }
+  }
+  return 0;
+}

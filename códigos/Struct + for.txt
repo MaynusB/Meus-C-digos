@@ -1,0 +1,25 @@
+#include <stdio.h>
+struct produto{
+  char nome[30];
+  float valor;
+};
+
+int main() {
+  int quantidade;
+  struct produto p;
+
+  printf("Digite abaixo a quantidade de PRODUTOS que você quer cadastrar:\n");
+  scanf("%d", &quantidade);
+
+  int i = 0;
+ for (i = 0; i < quantidade; i++){
+  printf("\nDigite o nome do produto:\n");
+  scanf("%s", p.nome);
+  printf("Digite o valor do produto:\n");
+  scanf("%f", &p.valor);
+  
+  printf("Nome do produto: %s\n", p.nome);
+  printf("Valor do produto: %.2f reais\n",p.valor);
+ }
+  return 0;
+}

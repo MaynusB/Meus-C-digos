@@ -1,0 +1,28 @@
+// Exemplo 01: COM conjunto heterogêneo
+#include <stdio.h>
+// criar conjunto heterogêneo: agrupar informações que estejam relacionadas, que sejam do mesmo domínio
+// conjunto heterogêneo = estrutura = struct
+struct pessoa{
+  char nome[20];
+  char endereco[50];
+  int idade;
+  int ntelefone;
+};
+int main() {
+  struct pessoa p;
+  // solicitar e gravar dados
+  printf("Digite o nome:\n");
+  scanf("%s", p.nome);
+  printf("Digite a idade:\n");
+  scanf("%d", &p.idade);
+  printf("Digite o número de telefone:\n");
+  scanf("%d", &p.ntelefone);
+  printf("Digite o endereço:\n");
+  scanf("%s", p.endereco);
+  // exibir dados
+  printf("\nNome: %s\n", p.nome);
+  printf("Idade: %d\n", p.idade);
+  printf("Telefone: %d\n", p.ntelefone);
+  printf("Endereço: %s\n", p.endereco);
+  return 0;
+}

@@ -1,0 +1,22 @@
+#include <stdio.h>
+struct Pessoa {
+  char nome[30];
+  int idade;
+};
+int main() {
+  struct Pessoa pessoa[3];
+  int i = 0;
+  for (i = 0; i < 3; i++){
+    printf("\nDigite o nome da %d° pessoa:\n",  i+1);
+    scanf("%s", pessoa[i].nome);
+    printf("Digite a idade da %d° pessoa:\n",  i+1);
+    scanf("%d", &pessoa[i].idade);
+  }
+
+  for (i = 0; i < 3; i++){
+    printf("\n%d° PESSOA:\n", i+1);
+    printf("Nome: %s\n", pessoa[i].nome);
+    printf("Idade: %d\n", pessoa[i].idade); 
+  }
+  return 0;
+}

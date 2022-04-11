@@ -1,0 +1,33 @@
+#include <stdio.h>
+struct valores{
+  float v1;
+  float v2;
+};
+
+int main() {
+  float soma;
+  float subtr;
+  float mult;
+  float div;
+  struct valores p;
+  printf("Digite o 1° valor:\n");
+  scanf("%f", &p.v1);
+  printf("Digite o 2° valor:\n");
+  scanf("%f", &p.v2);
+  
+  soma = p.v2 + p.v1;
+  div = p.v2 / p.v1;
+  mult = p.v2 * p.v1;
+  subtr = p.v2 - p.v1;
+
+  printf("Multiplicação:\n");
+  printf("%.2f:\n", mult);
+  printf("Divisão:\n");
+  printf("%.2f:\n", div);
+  printf("Adição:\n");
+  printf("%.2f:\n", soma);
+  printf("Subtração:\n");
+  printf("%.2f:\n", subtr);
+  
+  return 0;
+}

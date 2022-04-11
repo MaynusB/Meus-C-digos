@@ -1,0 +1,7 @@
+                                                  
+
+
+                                                    |TECLADO MUSICAL COM RGB|
+
+ EM RESUMO: Construir e programar um mini teclado musical no qual cada tecla selecionada/tocada ascende uma luz específica, fazendo 
+ com que qualquer música tocada se torne um "SHOW DE ARCO-ÍRIS"

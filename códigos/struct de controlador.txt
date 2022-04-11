@@ -1,0 +1,37 @@
+//Exercício 01: criar uma estrutura para um SENSOR DE TEMPERATURA que contenha o nome do fabricante, o modelo e o valor da temperatura). Essa estrutura sensor deverá ser utilizada dentro de uma outra estrutura chamada CONTROLADOR que contem a marca, o nome do fabricante e, obviamente, o sensor de temperatura. Após a criação das estruturas, cadastre e exiba na tela os dados de um CONTROLADOR.
+#include <stdio.h>
+struct sensor {
+  char modelo[20];
+  char fabricant[20];
+  float valortemp;
+};
+struct controlador{
+  char marca[20];
+  char fabricantc[20];
+  struct sensor sensor;
+};
+int main() {
+  struct controlador c;
+  
+  printf("Digite a marca:\n");
+  scanf("%s", c.marca);
+
+  printf("Digite o fabricante do controlador:\n");
+  scanf("%s", c.fabricantc);
+
+  printf("Digite o modelo do sensor:\n");
+  scanf("%s", c.sensor.modelo);
+
+  printf("Digite o fabricante do sensor:\n");
+  scanf("%s", c.sensor.fabricant);
+
+  printf("Digite o valor da temperatura do sensor:\n");
+  scanf("%f", &c.sensor.valortemp);
+
+  printf("\nMarca do controlador: %s\n", c.marca);
+  printf("Fabricante do controlador: %s\n", c.fabricantc);
+  printf("Modelo do sensor: %s\n", c.sensor.modelo);
+  printf("Fabricante do sensor: %s\n", c.sensor.fabricant);
+  printf("Temperatura do sensor: %.2f\n", c.sensor.valortemp);
+  return 0;
+}
